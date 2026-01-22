@@ -1,11 +1,13 @@
-/**
- * Fibonacci interface
- * @param {number} n
- * @param {boolean} flag
- * @returns {number}
- */
 function fun(n, flag) {
-  throw new Error("Not implemented");
+  if (flag === true) {
+    return fibRecursive(n);
+  }
+  return -1;
+}
+
+function fibRecursive(n) {
+  if (n <= 1) return n;
+  return fibRecursive(n - 1) + fibRecursive(n - 2);
 }
 
 module.exports = { fun };
